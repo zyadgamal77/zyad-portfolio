@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zyad Gamal | Creative Developer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300;600;800&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+    --bg-red:#8B1E24;
+    --orange:#FF9F1C;
+    --grey:#E5E5E5;
+    --white:#F4F4F4;
+    --black:#111;
+    --pad:4vw;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    background:var(--bg-red);
+    color:var(--white);
+    font-family:'Syne',sans-serif;
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:2rem var(--pad);
+}
+.logo{
+    font-weight:800;
+    font-size:1.5rem;
+    text-transform:uppercase;
+}
+
+/* HERO */
+.hero{
+    min-height:90vh;
+    padding:0 var(--pad);
+    display:flex;
+    align-items:center;
+    position:relative;
+}
+.hero h1{
+    font-family:'Fraunces',serif;
+    font-size:10vw;
+    line-height:.9;
+}
+.hero p{
+    margin-top:1rem;
+    font-size:1.2rem;
+    font-weight:700;
+}
+.hero img{
+    position:absolute;
+    right:5%;
+    width:32vw;
+    border-radius:12px;
+    box-shadow:15px 15px 0 rgba(0,0,0,.4);
+}
+
+/* MARQUEE */
+.marquee{
+    overflow:hidden;
+    border-top:1px solid rgba(255,255,255,.3);
+    border-bottom:1px solid rgba(255,255,255,.3);
+}
+.track{
+    display:flex;
+    white-space:nowrap;
+    animation:move 20s linear infinite;
+}
+.track span{
+    font-size:14vw;
+    font-weight:800;
+    padding:0 3vw;
+    -webkit-text-stroke:2px #fff;
+    color:transparent;
+}
+@keyframes move{
+    to{transform:translateX(-50%)}
+}
+
+/* SECTIONS */
+section{
+    padding:5rem var(--pad);
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.5rem;
+}
+.box{
+    padding:3rem;
+    min-height:220px;
+    font-weight:800;
+}
+.orange{background:var(--orange);color:var(--black)}
+.grey{background:var(--grey);color:var(--black)}
+.white{background:var(--white);color:var(--black)}
+
+.box h2{
+    font-size:3rem;
+}
+
+/* PROJECTS */
+.projects h1{
+    font-size:6vw;
+    font-family:'Fraunces',serif;
+    margin-bottom:3rem;
+}
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.5rem;
+}
+/* PROJECTS HORIZONTAL SCROLL */
+.projects h1{
+    font-size:6vw;
+    font-family:'Fraunces',serif;
+    margin-bottom:2rem;
+}
+
+.projects-scroll{
+    display:flex;
+    gap:1.5rem;
+    overflow-x:auto;
+    padding-bottom:1rem;
+}
+
+.projects-scroll::-webkit-scrollbar{
+    height:6px;
+}
+.projects-scroll::-webkit-scrollbar-thumb{
+    background:#fff;
+}
+
+.project-card{
+    min-width:320px;
+    background:var(--black);
+    color:var(--white);
+    padding:2rem;
+    border:3px solid var(--white);
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+
+.project-card h2{
+    font-size:1.8rem;
+    text-transform:uppercase;
+}
+
+.project-card p{
+    font-size:.95rem;
+    line-height:1.4;
+}
+
+.project-img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border:2px solid var(--white);
+}
+
+.github-btn{
+    align-self:flex-start;
+    border:2px solid var(--white);
+    padding:8px 14px;
+    font-weight:800;
+    text-transform:uppercase;
+    background:transparent;
+    color:var(--white);
+    text-decoration:none;
+}
+
+
+.project-card{
+    background:var(--black);
+    color:var(--white);
+    padding:3rem 2rem;
+    border:3px solid var(--white);
+    min-height:220px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-6px);
+    box-shadow:10px 10px 0 rgba(0,0,0,.4);
+}
+
+.project-card h2{
+    font-size:2rem;
+    text-transform:uppercase;
+}
+
+.project-card span{
+    font-size:.9rem;
+    opacity:.7;
+    text-transform:uppercase;
+    font-weight:700;
+}
+.info{
+    display:flex;
+    gap:2rem;
+    flex-wrap:wrap;
+}
+
+.info-item{
+    display:flex;
+    gap:1rem;
+    align-items:flex-start;
+}
+
+.info-item i{
+    font-size:1.4rem;
+}
+
+.info-item a{
+    color:inherit;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* FOOTER */
+footer{
+    padding:6rem var(--pad);
+    border-top:2px solid rgba(255,255,255,.2);
+}
+footer h1{
+    font-size:7vw;
+    font-family:'Fraunces',serif;
+}
+.info{
+    margin-top:3rem;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:2rem;
+    font-weight:700;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .hero{flex-direction:column}
+    .hero img{
+        position:relative;
+        width:90%;
+        margin-top:2rem;
+    }
+    .grid,
+    .projects-grid,
+    .info{
+        grid-template-columns:1fr;
+    }
+    .projects h1,
+    footer h1{
+        font-size:12vw;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Zyad Gamal</div>
+</nav>
+
+<header class="hero">
+    <div>
+        <h1>Zyad<br>Gamal</h1>
+        <p>Creative Developer & Flutter Engineer</p>
+        <p>Building bold, modern, high-impact digital experiences.</p>
+    </div>
+
+    <!-- YOUR IMAGE -->
+    <img src="images/profile.jpg">
+
+</header>
+
+<div class="marquee">
+    <div class="track">
+        <span>FLUTTER</span>
+        <span>UI/UX</span>
+        <span>FRONTEND</span>
+        <span>FLUTTER</span>
+    </div>
+</div>
+
+<section>
+    <div class="grid">
+        <div class="box orange">
+            <h2>Skills</h2>
+            <p>Flutter • Dart</p>
+        </div>
+
+        <div class="box grey">
+            <h2>15+</h2>
+            <p>Projects Completed</p>
+        </div>
+
+        <div class="box grey">
+            <h2>Focus</h2>
+            <p>Clean Code • Performance • UX</p>
+        </div>
+
+        <div class="box orange">
+            <h2>Status</h2>
+            <p>Open To Work</p>
+        </div>
+
+        <div class="box white">
+            <h2>Location</h2>
+            <p>Ismailia, Egypt</p>
+        </div>
+
+        <div class="box grey">
+            <h2>Email</h2>
+            <p>zyadgamal344@gmail.com</p>
+        </div>
+    </div>
+</section>
+<section class="projects">
+
+    <div class="projects-scroll">
+
+        <div class="project-card">
+            <h2>Quiz App</h2>
+            <p>Interactive quiz application built with Flutter focusing on UX and performance.</p>
+            <a href="https://github.com/zyadgamal77/quiz_app" target="_blank" class="github-btn">
+                GitHub →
+            </a>
+        </div>
+
+        <div class="project-card">
+            <h2>Thoutha App (Graduation project)</h2>
+            <p>Medical management app with clean architecture and real-world features.</p>
+            <a href="https://github.com/Joseph-George1/Teeth-Management-System" target="_blank" class="github-btn">
+                GitHub →
+            </a>
+        </div>
+
+
+    </div>
+</section>
+
+<footer>
+    <h1>Let’s Build<br>Something Great</h1>
+
+    <div class="info">
+
+        <div class="info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+                <p>Email</p>
+                <span></span> zyadgamal344@gmail.com
+                
+            </div>
+        </div>
+
+        <div class="info-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+                <p>Location</p>
+                <span>Ismailia, Egypt</span>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+                <p>Phone Number</p>
+                <span></span> 01207878277
+                
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+</body>
+</html>
